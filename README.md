@@ -1,2 +1,2 @@
-# Python
- Estudos sobre Python
+# python
+ estudos python
