@@ -11,7 +11,7 @@ print(f'{cores["verde"]}Vou pensar em um número entre 0 e 5. Tente adivinhar...
 print(f'{cores["amarelo"]}-=-{cores["limpar"]}' * 20)
 jogador = int(input('Em que número eu pensei? '))
 print(f'{cores["magenta"]}PROCESSANDO...{cores["limpar"]}')
-sleep(3)
+sleep(2)
 if jogador == computador:
     print(f'{cores["verde"]}PARABÉNS! Você conseguiu me vencer! Tá de hack?{cores["limpar"]}')
 else:
