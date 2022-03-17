@@ -3,13 +3,21 @@ print('Bem vindo ao jogo de adivinhação!')
 print('-' * 33)
 
 numero_secreto = 42
+
 chute = int(input('Digite o seu número: '))
 
-print(f'Você digitou {chute}', end=', ')
+print(f'Você digitou {chute}')
 
-if chute == numero_secreto:
+acertou = chute == numero_secreto
+maior = chute > numero_secreto
+menor = chute < numero_secreto
+
+if acertou:
     print('Você acertou!')
 else:
-    print('Você errou!')
-    print(f'O número era {numero_secreto}')
+    if maior:
+        print('Você errou, o seu chute foi maior do que valor correto!')
+    elif menor:
+        print('Você errou, seu chute foi menor do que valor correto!')
+
 print('Fim do jogo!')
