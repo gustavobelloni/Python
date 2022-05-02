@@ -1,4 +1,3 @@
-
 class Cliente:
 
     def __init__(self, nome):
@@ -13,6 +12,3 @@ class Cliente:
     def nome(self, nome):
         print('Chamando setter nome()')
         self.__nome = nome
-
-
-

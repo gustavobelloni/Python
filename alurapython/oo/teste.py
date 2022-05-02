@@ -13,4 +13,3 @@ def saca(conta, valor):
 
 def extrato(conta):
     print(f'Saldo é {conta["saldo"]}')
-    
