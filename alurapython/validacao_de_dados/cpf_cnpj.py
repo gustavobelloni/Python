@@ -1,5 +1,6 @@
 from validate_docbr import CPF, CNPJ
 
+
 class Documento:
 
     @staticmethod
@@ -11,6 +12,7 @@ class Documento:
         else:
             raise ValueError('Quantidade de dígitos esrá incorreta!')
 
+
 class DocCpf:
     def __init__(self, documento):
         if self.valida(documento):
@@ -21,13 +23,15 @@ class DocCpf:
     def __str__(self):
         return self.format()
 
-    def valida(self, documento):
+    @staticmethod
+    def valida(documento):
         validador = CPF()
         return validador.validate(documento)
 
     def format(self):
         mascara = CPF()
         return mascara.mask(self.cpf)
+
 
 class DocCnpj:
     def __init__(self, documento):
@@ -39,12 +43,11 @@ class DocCnpj:
     def __str__(self):
         return self.format()
 
-    def valida(self, documento):
+    @staticmethod
+    def valida(documento):
         validador = CNPJ()
         return validador.validate(documento)
 
     def format(self):
         mascara = CNPJ()
         return mascara.mask(self.cnpj)
-
-
