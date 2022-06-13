@@ -114,7 +114,6 @@ def desenha_forca(erros):
         print(" |            ")
         print(" |            ")
         print(" |            ")
-
     if(erros == 2):
         print(" |      (_)   ")
         print(" |       |    ")
