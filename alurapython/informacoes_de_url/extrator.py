@@ -55,12 +55,17 @@ class ExtratorURL:
 
 url = 'bytebank.com/cambio?quantidade=100&moedaDestino=dolar&moedaOrigem=real'
 extrator_url = ExtratorURL(url)
-extrator_url_2 = ExtratorURL(url)
+valor_dolar = 5.50
+moeda_destino = extrator_url.get_valor_parametro('moedaDestino')
+moeda_origem = extrator_url.get_valor_parametro('moedaOrigem')
+quantidade = int(extrator_url.get_valor_parametro('quantidade'))
 
-print(extrator_url == extrator_url_2) 
 
-# print(f'O tamanho da URL é {len(extrator_url)}')
-# print(extrator_url)
-
-# valor_quantidade = extrator_url.get_valor_parametro('quantidade')
-# print(valor_quantidade)
+if moeda_destino == 'dolar' and moeda_origem == 'real':
+    valor_conversao = quantidade * valor_dolar
+    print(f'O valor de {quantidade} dólares é igual a {valor_conversao:.2f} reais')
+elif moeda_destino == 'real' and moeda_origem == 'dolar':
+    valor_conversao = quantidade / valor_dolar
+    print(f'O valor de {quantidade} reais é igual a {valor_conversao:.2f} dólares')
+else:
+    print(f'Câmbio de {moeda_origem} para {moeda_destino} não está disponível')
