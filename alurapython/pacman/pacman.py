@@ -27,7 +27,7 @@ while True:
     if y - raio < 0:
         vel_y = velocidade
 
-    # Pinta
+    # Pintar a tela
     tela.fill(preto)
     pygame.draw.circle(tela, verde, (int(x), int(y)), raio, 0)
     pygame.display.update()
