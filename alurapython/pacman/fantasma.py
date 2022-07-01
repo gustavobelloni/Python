@@ -30,7 +30,7 @@ esquerda = 4
 class Fantasma(ElementoJogo):
     def __init__(self, cor, tamanho):
         self.coluna = 13.0
-        self.linha = 15.0
+        self.linha = 13.0
         self.linha_intencao = self.linha
         self.coluna_intencao = self.coluna
         self.velocidade = 1
